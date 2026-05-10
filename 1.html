@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartFarm - Future of Agriculture</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header id="header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="contact-info">
+          <a href="mailto:info@smartfarm.com"><i class="fa fa-envelope"></i> info@smartfarm.com</a>
+          <a href="tel:+919876543210"><i class="fa fa-phone"></i> +91 98765 43210</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="navbar">
+      <div class="container navbar-inner">
+        <!-- Logo -->
+        <a href="#home" class="logo">
+          <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/2a4fd8f32_generated_a16ae7bd.png" alt="SmartFarm Logo"/>
+          <span>Smart<span class="highlight">Farm</span></span>
+        </a>
+
+        <!-- Nav Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li class="dropdown">
+            <a href="#services">Services <i class="fa fa-chevron-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="#services">IoT Monitoring</a></li>
+              <li><a href="#services">Smart Irrigation</a></li>
+              <li><a href="#services">Crop Analytics</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#about">Solutions <i class="fa fa-chevron-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="#about">Precision Farming</a></li>
+              <li><a href="#about">Greenhouse Auto</a></li>
+              <li><a href="#about">Livestock Mgmt</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Search + Hamburger -->
+        <div class="nav-actions">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button onclick="toggleSearch()" aria-label="Search"><i class="fa fa-search"></i></button>
+          </div>
+          <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ BANNER ============ -->
+  <section id="home" class="banner">
+    <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/2b6f56588_generated_9c0b68d1.png" alt="Smart Farm Banner" class="banner-bg"/>
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+      <span class="badge">Next-Gen Agriculture</span>
+      <h1>Cultivating the <br/><span class="accent">Future</span> of Farming</h1>
+      <p>Harness IoT, AI, and precision agriculture to grow smarter, save resources, and maximize yield.</p>
+      <div class="banner-buttons">
+        <a href="#about" class="btn btn-primary">Explore More <i class="fa fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY CONTAINER ============ -->
+  <main class="body-container">
+
+    <!-- SECTION 1: One Block Info + One Block Image -->
+    <section id="about" class="section section-about">
+      <div class="container about-grid">
+        <!-- Image Block -->
+        <div class="about-image" data-animate="fade-left">
+          <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/31288a871_generated_56a399cf.png" alt="Smart Farming"/>
+          <div class="stat-card">
+            <p class="stat-num">95%</p>
+            <p class="stat-label">Water Savings</p>
+          </div>
+        </div>
+        <!-- Info Block -->
+        <div class="about-info" data-animate="fade-right">
+          <span class="section-tag">About SmartFarm</span>
+          <h2>Revolutionizing Agriculture with Technology</h2>
+          <p>SmartFarm combines cutting-edge IoT sensors, AI-powered analytics, and precision agriculture techniques to help farmers make data-driven decisions. Our solutions reduce water usage, optimize fertilizer application, and predict crop health issues before they become problems.</p>
+          <div class="highlight-grid">
+            <div class="highlight-card"><i class="fa fa-leaf"></i> Organic Methods</div>
+            <div class="highlight-card"><i class="fa fa-tint"></i> Water Efficient</div>
+            <div class="highlight-card"><i class="fa fa-chart-bar"></i> Data Driven</div>
+            <div class="highlight-card"><i class="fa fa-shield-alt"></i> Crop Protection</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Three Blocks of Information (Services) -->
+    <section id="services" class="section section-services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Services</span>
+          <h2>Smart Solutions for Modern Farms</h2>
+          <p>We offer comprehensive technology-driven farming solutions designed to boost productivity while minimizing environmental impact.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-animate="fade-up" onclick="openModal('IoT Soil Monitoring','Real-time soil moisture, pH, and nutrient tracking with wireless sensors deployed across your fields for precise data collection.','https://media.base44.com/images/public/69ff66df488f1a0941b45d58/8b09e6530_generated_2a4b45c6.png')">
+            <div class="service-img">
+              <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/8b09e6530_generated_2a4b45c6.png" alt="IoT Monitoring"/>
+            </div>
+            <div class="service-body">
+              <h3>IoT Soil Monitoring</h3>
+              <p>Real-time soil moisture, pH, and nutrient tracking with wireless sensors deployed across your fields for precise data collection.</p>
+              <span class="learn-more">Learn More &#8599;</span>
+            </div>
+          </div>
+          <div class="service-card" data-animate="fade-up" style="animation-delay:0.15s" onclick="openModal('Greenhouse Automation','Fully automated climate control, irrigation, and lighting systems for optimal growing conditions year-round in your greenhouse.','https://media.base44.com/images/public/69ff66df488f1a0941b45d58/345dc1e3d_generated_image.png')">
+            <div class="service-img">
+              <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/345dc1e3d_generated_image.png" alt="Greenhouse"/>
+            </div>
+            <div class="service-body">
+              <h3>Greenhouse Automation</h3>
+              <p>Fully automated climate control, irrigation, and lighting systems for optimal growing conditions year-round in your greenhouse.</p>
+              <span class="learn-more">Learn More &#8599;</span>
+            </div>
+          </div>
+          <div class="service-card" data-animate="fade-up" style="animation-delay:0.3s" onclick="openModal('Crop Analytics & AI','AI-powered yield predictions, disease detection, and harvest optimization using satellite imagery and field sensor data.','https://media.base44.com/images/public/69ff66df488f1a0941b45d58/d4ea642a9_generated_79f16279.png')">
+            <div class="service-img">
+              <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/d4ea642a9_generated_79f16279.png" alt="Crop Analytics"/>
+            </div>
+            <div class="service-body">
+              <h3>Crop Analytics & AI</h3>
+              <p>AI-powered yield predictions, disease detection, and harvest optimization using satellite imagery and field sensor data.</p>
+              <span class="learn-more">Learn More &#8599;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Full Width BG Image + Paragraph + Button -->
+    <section class="section section-cta">
+      <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/0efeef8e2_generated_7ddc1327.png" alt="Drone Farm" class="cta-bg"/>
+      <div class="cta-overlay"></div>
+      <div class="container cta-content">
+        <h2>Ready to Transform<br/>Your Farm?</h2>
+        <p>Join thousands of farmers already using SmartFarm technology to increase yields by up to 40% while reducing water and fertilizer costs.</p>
+        <a href="#contact" class="btn btn-accent">Start Your Journey <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Google Map + Contact Form -->
+    <section id="contact" class="section section-contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Contact Us</span>
+          <h2>Get in Touch</h2>
+          <p>Have questions about our smart farming solutions? Drop us a message and our team will respond within 24 hours.</p>
+        </div>
+        <div class="contact-grid">
+          <!-- Google Map -->
+          <div class="map-col">
+            <div class="map-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.315!2d78.3878!3d17.4435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc47b2b3a5%3A0x538a5dc43ea4f549!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="SmartFarm Location">
+              </iframe>
+            </div>
+            <div class="contact-info-cards">
+              <div class="info-card"><i class="fa fa-map-marker-alt"></i> Hyderabad, India</div>
+              <div class="info-card"><i class="fa fa-envelope"></i> info@smartfarm.com</div>
+              <div class="info-card"><i class="fa fa-phone"></i> +91 98765 43210</div>
+            </div>
+          </div>
+          <!-- Form -->
+          <div class="form-col">
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your farming needs..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fa fa-paper-plane"></i></button>
+              <div id="formSuccess" class="form-success hidden">✅ Message sent! We'll get back to you soon.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="https://media.base44.com/images/public/69ff66df488f1a0941b45d58/2a4fd8f32_generated_a16ae7bd.png" alt="SmartFarm Logo"/>
+          <span>Smart<span class="accent">Farm</span></span>
+        </div>
+        <p>Transforming agriculture through technology. Grow smarter, save resources, and build a sustainable future.</p>
+        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="subEmail" placeholder="Your email address" required/>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div id="subSuccess" class="form-success hidden">✅ Subscribed successfully!</div>
+      </div>
+      <!-- Links -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">IoT Monitoring</a></li>
+          <li><a href="#">Smart Irrigation</a></li>
+          <li><a href="#">Crop Analytics</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 SmartFarm. All Rights Reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <footer>
+  ....
+</footer>
+
+<!-- ADD MODAL HERE -->
+<div id="serviceModal" class="modal-backdrop hidden">
+  <div class="modal-box">
+
+    <button class="modal-close" onclick="closeModal()">
+      &times;
+    </button>
+
+    <img id="modalImg" src="" alt="Service Image">
+
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+
+      <button class="btn btn-primary" onclick="closeModal()">
+        Close
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<footer>
+  ....
+</footer>
+
+<!-- ADD MODAL HERE -->
+<div id="serviceModal" class="modal-backdrop hidden">
+  <div class="modal-box">
+
+    <button class="modal-close" onclick="closeModal()">
+      &times;
+    </button>
+
+    <img id="modalImg" src="" alt="Service Image">
+
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+
+      <button class="btn btn-primary" onclick="closeModal()">
+        Close
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div id="serviceModal" class="modal-backdrop hidden">  <div class="modal-box">    <button class="modal-close" onclick="closeModal()">      &times;    </button>    <img id="modalImg" src="" alt="Service Image">    <div class="modal-body">      <h3 id="modalTitle"></h3>      <p id="modalDesc"></p>      <button class="btn btn-primary" onclick="closeModal()">        Close      </button>    </div>  </div></div><script src="script.js"></script></body></html>
